@@ -13,7 +13,7 @@ By default passwords should be hidden with "\*", when user clicks the password f
 
 # STRUCTURE
 
-###COMPONENTS:
+##COMPONENTS:
 
  * --App
    * --Header
@@ -28,6 +28,6 @@ By default passwords should be hidden with "\*", when user clicks the password f
        * --LoginForm
      * +Register
        * --RegisterForm
-###SERVICES:
+##SERVICES:
 
  * --GetDataService
