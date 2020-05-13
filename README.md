@@ -1,4 +1,4 @@
-/_ eslint no-use-before-define: 0 _/
+/_ eslint-disable _/
 
 # TASK
 
@@ -14,18 +14,18 @@ By default passwords should be hidden with "\*", when user clicks the password f
 # STRUCTURE
 
 COMPONENTS:
---App
---Header
---Heading
---HeaderNav
-ROUTING:
-+Dashboard
---List
---ListItem
---AddItemForm
-+Login
---LoginForm
-+Register
---RegisterForm
+	--App
+		--Header
+			--Heading
+			--HeaderNav
+		ROUTING:
+			+Dashboard
+				--List
+					--ListItem
+				--AddItemForm
+			+Login
+				--LoginForm
+			+Register
+				--RegisterForm
 SERVICES:
---GetDataService
+	--GetDataService
