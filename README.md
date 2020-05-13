@@ -1,5 +1,3 @@
-/_ eslint-disable _/
-
 # TASK
 
 You need to complete the following test task:
@@ -14,6 +12,20 @@ By default passwords should be hidden with "\*", when user clicks the password f
 # STRUCTURE
 
 ## COMPONENTS:
+
+`--App
+  --Header
+    --Heading
+    --HeaderNav
+  --ROUTING:
+    +Dashboard
+      --List
+        --ListItem
+      --AddItemForm
+    +Login
+      --LoginForm
+    +Register
+      --RegisterForm`
 
 - --App
   - --Header
