@@ -1,0 +1,11 @@
+.header-nav-list {
+  width: 100%;
+}
+
+.header-nav-heading .icon {
+  margin-right: 0.5rem;
+}
+
+header .nav-link .active {
+  color: white;
+}

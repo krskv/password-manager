@@ -1,0 +1,12 @@
+.register-form input {
+  margin-bottom: 0.5rem;
+}
+
+.register-form .form-group {
+  width: 100%;
+}
+
+.register-form button {
+  margin-top: 0.5rem;
+  width: 8rem;
+}

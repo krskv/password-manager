@@ -18,19 +18,19 @@ By default passwords should be hidden with "\*", when user clicks the password f
   --Header
     --Heading
     --HeaderNav
-  --ROUTING:
-    +Dashboard
+  ROUTING=>
+    --Dashboard
       --List
         --ListItem
       --AddItemForm
-    +Login
+    --Login
       --LoginForm
-    +Register
+    --Register
       --RegisterForm
 ```
 
 ### SERVICES:
 
 ```
-- --GetDataService
+--ServerDataService
 ```
