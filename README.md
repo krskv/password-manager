@@ -18,7 +18,7 @@ By default passwords should be hidden with "\*", when user clicks the password f
   --Header
     --Heading
     --HeaderNav
-  ROUTING=>
+  ROUTER=>
     --Dashboard
       --List
         --ListItem
@@ -27,6 +27,8 @@ By default passwords should be hidden with "\*", when user clicks the password f
       --LoginForm
     --Register
       --RegisterForm
+  --EditModal(?)
+  --Indicator(?)
 ```
 
 ### SERVICES:
