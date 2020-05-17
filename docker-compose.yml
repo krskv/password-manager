@@ -1,0 +1,26 @@
+version: "3"
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+			- 8080:8080
+	apache:
+		image: 'bitnami/apache:latest'
+		ports:
+			- '80:8080'
+			- '443:8443'
+		volumes:
+			- /path/to/app:/app
+	nginx:
+		image: nginx:1.13
+		ports:
+			- 80:80
+		volumes:
+			- ./src:/usr/share/nginx/html

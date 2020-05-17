@@ -5,7 +5,7 @@ import PasswordListItem from "./../password-list-item/";
 export default class PasswordList extends Component {
   noItems = (<p className="text-info text-center">No elements added yet.</p>);
 
-  getElements = ({ passwords, onPasswordDelete }) => {
+  getElements = ({ passwords, onPasswordDelete, onPasswordEdit }) => {
     const elements = passwords.map((item) => {
       const { id, ...itemProps } = item;
       return (
@@ -13,6 +13,7 @@ export default class PasswordList extends Component {
           <PasswordListItem
             {...itemProps}
             onDelete={() => onPasswordDelete(id)}
+            onEdit={() => onPasswordEdit(id)}
           />
         </li>
       );

@@ -9,3 +9,7 @@
 header .nav-link .active {
   color: white;
 }
+
+.logout .icon {
+  margin-left: 0.3rem;
+}

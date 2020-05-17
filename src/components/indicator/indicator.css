@@ -1,0 +1,11 @@
+.alert {
+  position: fixed;
+  top: 3rem;
+  z-index: 101;
+  right: 3rem;
+  padding-right: 1rem;
+}
+
+.alert-dismissable test {
+  padding-right: 1rem;
+}

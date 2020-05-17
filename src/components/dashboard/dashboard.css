@@ -1,1 +1,14 @@
+.welcoming-screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.welcoming-screen-actions {
+  display: flex;
+  align-items: center;
+}
+
+.welcoming-screen-actions .btn {
+  margin-left: 1.2rem;
+}

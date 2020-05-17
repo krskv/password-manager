@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./login.css";
+import ServerService from "./../../services/server-service";
 
 export default class Login extends Component {
+  server = new ServerService();
   state = {
     email: "",
     password: "",
@@ -16,7 +18,12 @@ export default class Login extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    console.log(email, password);
+    const { error, user } = this.server.getUser(email, password);
+    this.props.showIndicator(
+      error.isError ? "warning" : "success",
+      error.message
+    );
+    if (!error.isError) this.props.onLoggedin(user);
   };
 
   render() {

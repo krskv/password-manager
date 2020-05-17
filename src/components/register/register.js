@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import "./register.css";
+import ServerService from "./../../services/server-service";
 
 export default class Login extends Component {
+  server = new ServerService();
   state = {
     userName: "",
     email: "",
@@ -16,9 +18,15 @@ export default class Login extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { email, password, userName } = this.state;
-    console.log(email, password, userName);
+    const { error, user } = this.server.addUser(this.state);
+
+    this.props.showIndicator(
+      error.isError ? "warning" : "success",
+      error.message
+    );
+    if (!error.isError) this.props.onRegistered(user);
   };
+
   render() {
     return (
       <div className="register-page">

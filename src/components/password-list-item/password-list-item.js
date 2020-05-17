@@ -13,29 +13,42 @@ export default class PasswordListItem extends Component {
   };
 
   render() {
-    const { title, password, onDelete } = this.props;
+    const { title, password, onDelete, onEdit } = this.props;
 
-    const resTitle = this.state.isVisible
+    const resPassword = this.state.isVisible
       ? password
       : this.toAsterisk(password);
 
+    const passwordActiveClass = this.state.isVisible ? " active" : "";
+
     return (
-      <span className="password-list-item">
-        <span className="title">{title} :</span>
-        <span
-          className="password-badge badge badge-light"
-          onClick={this.revealPassword}
-        >
-          {resTitle}
-        </span>
-        <button
-          type="button"
-          className="btn btn-outline-danger btn-sm float-right"
-          onClick={onDelete}
-        >
-          <i className="fa fa-trash-o" />
-        </button>
-      </span>
+      <div className="password-list-item">
+        <div className="password-list-item-data">
+          <span className="title">{title} :</span>
+          <span
+            className={`password-badge badge badge-light${passwordActiveClass}`}
+            onClick={this.revealPassword}
+          >
+            {resPassword}
+          </span>
+        </div>
+        <div className="password-list-item-actions">
+          <button
+            type="button"
+            className="btn btn-outline-danger btn-sm float-right"
+            onClick={onDelete}
+          >
+            <i className="fa fa-trash-o" />
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-success btn-sm float-right"
+            onClick={onEdit}
+          >
+            <i className="fa fa-pencil" />
+          </button>
+        </div>
+      </div>
     );
   }
 }
